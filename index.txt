@@ -149,7 +149,7 @@ example@gmail.com
 Address : 
 San Francisco, USA
 
-&copy; 2022 codewithsadee. All right reserved
+&copy; 2022 . All right reserved
 
 
 
