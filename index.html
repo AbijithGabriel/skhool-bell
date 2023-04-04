@@ -15,7 +15,7 @@
   <!-- 
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style1.css">
 
   <!-- 
     - google font link
@@ -36,57 +36,152 @@
   <header class="header" data-header>
     <div class="container">
 
-      <div class="overlay" data-overlay></div>
-
-      <a href="#" class="logo">
-        <img src="./assets/images/logo.svg" alt="Eduland logo">
-      </a>
-
-      <button class="menu-open-btn" data-menu-open-btn>
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
+      <h1>
+        <a href="#" class="logo"><img src="./assets/images/logo2.jpg" alt=""></a>
+      </h1>
 
       <nav class="navbar" data-navbar>
 
-        <button class="menu-close-btn" data-menu-close-btn>
-          <ion-icon name="close-outline"></ion-icon>
-        </button>
+        <div class="navbar-top">
+          <a href="#" class="logo"><img src="./assets/images/logo2.jpg" alt=""></a>
 
-        <a href="#" class="logo">
-          <img src="./assets/images/logo.svg" alt="Eduland logo">
-        </a>
+          <button class="nav-close-btn" aria-label="Close menu" data-nav-toggler>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
 
         <ul class="navbar-list">
 
-          <li>
-            <a href="#" class="navbar-link">Home</a>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-toggler>Home</a>
           </li>
 
-          <li>
-            <a href="#" class="navbar-link">About</a>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-toggler>About us</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="#">Mandatory Disclosure</a></li>
+                    <li><a href="#">Oasis Report</a></li>
+                    <li><a href="#">Oasis Campus</a></li>
+                    <li><a href="#">Our History</a></li>
+                    <li><a href="#">Our Founder</a></li>
+                    <li><a href="#">Aims & Objectives</a></li>
+                    <li><a href="#">Mission & Vision</a></li>
+                    <li><a href="#">Principal's Message</a></li>
+                    <li><a href="#">Management</a></li>
+                    <li><a href="#">History of Formal Principles</a></li>
+                    <li><a href="#">Rules & Regulations</a></li>
+                    <li><a href="#">Director Board Members</a></li>
+                    <li><a href="#">Uniform</a></li>
+                </ul>
+            </div>
           </li>
 
-          <li>
-            <a href="#" class="navbar-link">Service</a>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-toggler>Faculty</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="#">Staff Photo</a></li>
+                </ul>
+            </div>
           </li>
 
-          <li>
-            <a href="#" class="navbar-link">Blog</a>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-toggler>Academics & More</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="#">Affiliations</a></li>
+                    <li><a href="#">Merit Day</a></li>
+                    <li><a href="#">Attendance</a></li>
+                    <li><a href="#">Value Education</a></li>
+                    <li><a href="#">Co-Curricular Activities</a></li>
+                    <li class="hover-me"><a href="#">TC Issued</a></li>
+                    <div class="sub-menu-2">
+                        <ul>
+                            <li><a href="#">TC-2020-2021</a></li>
+                            <li><a href="#">TC 2021-2022</a></li>
+                            <li><a href="#">TC 2022-2023</a></li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
           </li>
 
-          <li>
-            <a href="#" class="navbar-link">Contact</a>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-toggler>Infrastructure</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="#">Facilities</a></li>
+                </ul>
+            </div>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-toggler>Admission</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-toggler>News & Events</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-toggler>Gallery</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="#">Photo Gallery</a></li>
+                    <li><a href="#">Video Gallery</a></li>
+                </ul>
+            </div>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-toggler>Contact us</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="#">Location Map</a></li>
+                </ul>
+            </div>
           </li>
 
         </ul>
 
-        <button class="btn btn-secondary">Get Started</button>
-
       </nav>
+
+      <div class="header-actions">
+
+        <button class="header-action-btn" aria-label="Open search" data-search-toggler>
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+
+
+
+        <button class="header-action-btn nav-open-btn" aria-label="Open menu" data-nav-toggler>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
 
     </div>
   </header>
+  <!-- 
+    - #SEARCH BOX
+  -->
+    <div class="search-container" data-search-box>
+    <div class="container">
 
+      <button class="search-close-btn" aria-label="Close search" data-search-toggler>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="search-wrapper">
+        <input type="search" name="search" placeholder="Search Here..." aria-label="Search" class="search-field">
+
+        <button class="search-submit" aria-label="Submit" data-search-toggler>
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+
+    </div>
+  </div>
 
 
 
