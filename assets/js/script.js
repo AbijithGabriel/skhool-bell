@@ -1,51 +1,76 @@
 'use strict';
 
+
+
 /**
- * navbar variables
+ * element toggle function
  */
 
-const navOpenBtn = document.querySelector("[data-menu-open-btn]");
-const navCloseBtn = document.querySelector("[data-menu-close-btn]");
+const toggleElem = function (elem) { elem.classList.toggle("active"); }
+
+
+
+/**
+ * navbar toggle
+ */
+
 const navbar = document.querySelector("[data-navbar]");
+const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const overlay = document.querySelector("[data-overlay]");
 
-const navElemArr = [navOpenBtn, navCloseBtn, overlay];
-
-for (let i = 0; i < navElemArr.length; i++) {
-
-  navElemArr[i].addEventListener("click", function () {
-
-    navbar.classList.toggle("active");
-    overlay.classList.toggle("active");
-
+for (let i = 0; i < navTogglers.length; i++) {
+  navTogglers[i].addEventListener("click", function () {
+    toggleElem(navbar);
+    toggleElem(overlay);
   });
-
 }
 
 
 
 /**
- * header sticky functionality
+ * header sticky & back to top button
  */
 
 const header = document.querySelector("[data-header]");
+const backTopBtn = document.querySelector("[data-back-top-btn]");
 
 window.addEventListener("scroll", function () {
-
-  window.scrollY >= 20 ? header.classList.add("active") : header.classList.remove("active");
-
+  if (window.scrollY >= 100) {
+    header.classList.add("active");
+    backTopBtn.classList.add("active");
+    header.classList.add("header-anim");
+  } else {
+    header.classList.remove("active");
+    backTopBtn.classList.remove("active");
+    header.classList.remove("header-anim");
+  }
 });
 
 
 
 /**
- * go top
+ * search box toggle
  */
 
-const goTopBtn = document.querySelector("[data-go-top]");
+const searchTogglers = document.querySelectorAll("[data-search-toggler]");
+const searchBox = document.querySelector("[data-search-box]");
 
-window.addEventListener("scroll", function () {
+for (let i = 0; i < searchTogglers.length; i++) {
+  searchTogglers[i].addEventListener("click", function () {
+    toggleElem(searchBox);
+  });
+}
 
-  window.scrollY >= 800 ? goTopBtn.classList.add("active") : goTopBtn.classList.remove("active");
 
-});
+
+/**
+ * whishlist button toggle
+ */
+
+const whishlistBtns = document.querySelectorAll("[data-whish-btn]");
+
+for (let i = 0; i < whishlistBtns.length; i++) {
+  whishlistBtns[i].addEventListener("click", function () {
+    toggleElem(this);
+  });
+}
